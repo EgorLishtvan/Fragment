@@ -11,14 +11,38 @@ class MainActivity : AppCompatActivity() {
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
         setContentView(binding.root)
-var count=0
-    binding.bFrag2.setOnClickListener{
-    supportFragmentManager
-        .beginTransaction()
-        .replace(R.id.place_halder,BlankFragment2.newInstance()).commit()
-        count++
-}
-        supportFragmentManager.
-        beginTransaction().replace(R.id.place_halder,BlankFragment()).commit()
+        var count=0
+        while (count < 3) {
+            if(count==0) {
+                binding.bFrag2.setOnClickListener {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.place_halder, BlankFragment2.newInstance()).commit()
+                    count+1
+                }
+            }
+            if (count==1) {
+                binding.bFrag2.setOnClickListener {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.place_halder, BlankFragment3.newInstance()).commit()
+                    count+1
+                }
+            }
+            if (count==2) {
+                binding.bFrag2.setOnClickListener {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.place_halder, BlankFragment4.newInstance()).commit()
+                    count+1
+                }
+            }
+            else{
+                count=0
+            }
+                    supportFragmentManager .
+                    beginTransaction ().replace(R.id.place_halder, BlankFragment()).commit()
+        }
     }
+
 }
