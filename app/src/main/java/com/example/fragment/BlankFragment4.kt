@@ -17,8 +17,6 @@ class BlankFragment4 : Fragment() {
     }
 
     companion object {
-
-        @JvmStatic
         fun newInstance()=BlankFragment4()
                 }
             }
