@@ -7,21 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class BlankFragment2 : Fragment() {
+class BlankFragmentFirst : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank2, container, false)
+        return inflater.inflate(R.layout.fragment_blank_first, container, false)
     }
 
     companion object {
-
-        @JvmStatic
-        fun newInstance()=
-            BlankFragment2()
+        const val TagFirst="com.example.fragment.BlankFragmentFirst"
+        fun newInstance()=BlankFragmentFirst()
 
                 }
             }
